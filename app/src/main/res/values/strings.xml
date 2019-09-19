@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Veterinarias</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_vista__user">Vista_User</string>
+    <string name="title_activity_historial">Historial</string>
+</resources>
