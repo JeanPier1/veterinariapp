@@ -37,7 +37,7 @@ public class Vista_User extends AppCompatActivity {
         String id = getIntent().getStringExtra("ID");
         String nombre = getIntent().getStringExtra("Nombre");
 
-        System.out.println("  asdasd" + id+" " +nombre);
+        //AGREGAR MASCOTAS
 
  /*       mascotas=new Mascotas("Marquitos","M","PITBULL","null",Integer.parseInt(id));
         bd_mascotas = new BD_MASCOTAS(getApplicationContext());

@@ -53,6 +53,7 @@ public class HistorialRun extends AppCompatActivity {
         viewid.setAdapter(adapter);
 
 
+        //AGREGAR HISTORIAL
 
 /*        tipoHistorial = new TipoHistorial("ACTIVO");
         tipoHistorial2 = new TipoHistorial("INACTIVO");

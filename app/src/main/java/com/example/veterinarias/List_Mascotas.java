@@ -29,7 +29,6 @@ public class List_Mascotas extends AppCompatActivity {
 
         bd_mascotas=new BD_MASCOTAS(getApplicationContext());
         ArrayList<Mascotas> mus =bd_mascotas.Listado(Integer.parseInt(id));
-        System.out.println(" :  :  "+mus.size());
         gridMascotas = new GridMascotas(mus,this);
         idListview.setAdapter(gridMascotas);
 

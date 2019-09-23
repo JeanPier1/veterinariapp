@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
         txtuser = findViewById(R.id.txtuser);
         txtpass = findViewById(R.id.txtpass);
         bd_user = new BD_USER(getApplicationContext());
+
+        //Agregar Usuario
         /*us=new Usuario("abdiel","123","abdiel");
         bd_user.agregar(us);
         System.out.println(" : "+ bd_user.mostrar().size());
