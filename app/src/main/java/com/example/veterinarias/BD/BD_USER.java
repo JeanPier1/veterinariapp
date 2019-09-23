@@ -10,28 +10,12 @@ import com.example.veterinarias.Entities.Usuario;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BD_USER extends SQLiteOpenHelper {
+public class BD_USER extends BD_CENTER {
 
-    public final static String BD = "BD_USER";
-    public final static int VERSION =3 ;
 
     public BD_USER(Context context) {
-        super(context, BD, null, VERSION);
+        super(context);
     }
-
-    @Override
-    public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        sqLiteDatabase.execSQL(UserQuery.CREARTABLE);
-
-    }
-
-    @Override
-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS "+UserQuery.TABLA);
-        sqLiteDatabase.execSQL(UserQuery.CREARTABLE);
-
-    }
-
 
     public void agregar(Usuario us){
         String qry=UserQuery.INSERT(us);

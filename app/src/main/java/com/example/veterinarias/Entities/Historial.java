@@ -5,7 +5,6 @@ public class Historial {
     private int id;
     private String fecha;
     private String motivo;
-    private String estado;
     private  int idmascotas;
     private int idtipohistorial;
 
@@ -51,14 +50,6 @@ public class Historial {
         this.motivo = motivo;
     }
 
-    public String getEstado() {
-        return estado;
-    }
-
-    public void setEstado(String estado) {
-        this.estado = estado;
-    }
-
     public int getIdmascotas() {
         return idmascotas;
     }
@@ -75,9 +66,9 @@ public class Historial {
         this.idtipohistorial = idtipohistorial;
     }
 
-    public Historial(String fecha, String motivo, String estado) {
+    public Historial(String fecha, String motivo) {
         this.fecha = fecha;
         this.motivo = motivo;
-        this.estado = estado;
     }
+
 }

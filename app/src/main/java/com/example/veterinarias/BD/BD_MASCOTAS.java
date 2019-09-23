@@ -7,25 +7,10 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import com.example.veterinarias.Entities.Mascotas;
 
-public class BD_MASCOTAS extends SQLiteOpenHelper {
-
-    public final static String BD = "BD_MASCOTAS";
-    public final static int VERSION =2;
+public class BD_MASCOTAS extends BD_CENTER {
 
     public BD_MASCOTAS(Context context) {
-        super(context, BD, null, VERSION);
-    }
-
-    @Override
-    public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        sqLiteDatabase.execSQL(MascotasQuery.CREARTABLE);
-
-    }
-
-    @Override
-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS "+MascotasQuery.TABLA);
-        sqLiteDatabase.execSQL(MascotasQuery.CREARTABLE);
+        super(context);
     }
 
     public void agregar(Mascotas us){

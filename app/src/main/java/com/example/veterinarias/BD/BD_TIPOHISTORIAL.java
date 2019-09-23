@@ -10,28 +10,12 @@ import com.example.veterinarias.Entities.TipoHistorial;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BD_TIPOHISTORIAL extends SQLiteOpenHelper {
-
-    public final static String BD = "BD_TIPOHISTORIAL";
-    public final static int VERSION =1 ;
+public class BD_TIPOHISTORIAL extends BD_CENTER {
 
 
     public BD_TIPOHISTORIAL(Context context) {
-        super(context, BD, null, VERSION);
+        super(context);
     }
-
-    @Override
-    public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        sqLiteDatabase.execSQL(TipoHistorialQRY.CREARTABLE);
-    }
-
-    @Override
-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS "+TipoHistorialQRY.TABLA);
-        sqLiteDatabase.execSQL(TipoHistorialQRY.CREARTABLE);
-
-    }
-
 
     public void agregar(TipoHistorial tipoHistorial){
         String qry=TipoHistorialQRY.INSERT(tipoHistorial);
