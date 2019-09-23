@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                     us= new Usuario(id,user,pass,nombre);
                     System.out.println("  asas : "+us.getId());
                     rs.close();
-                    Intent as= new Intent(MainActivity.this, Vista_User.class);
+                    Intent as= new Intent(MainActivity.this, List_Mascotas.class);
                     as.putExtra("ID",String.valueOf(us.getId()));
                     as.putExtra("Nombre",us.getNombre());
                     startActivity(as);

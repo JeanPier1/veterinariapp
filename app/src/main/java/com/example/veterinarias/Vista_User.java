@@ -39,10 +39,10 @@ public class Vista_User extends AppCompatActivity {
 
         System.out.println("  asdasd" + id+" " +nombre);
 
-        /*mascotas=new Mascotas("Pablito","M","BEAGLE","null",Integer.parseInt(id));
+ /*       mascotas=new Mascotas("Marquitos","M","PITBULL","null",Integer.parseInt(id));
         bd_mascotas = new BD_MASCOTAS(getApplicationContext());
-        bd_mascotas.agregar(mascotas);*/
-
+        bd_mascotas.agregar(mascotas);
+*/
         Cursor rs=bd_mascotas.listaranimal(Integer.parseInt(id));
 
         if(rs.moveToFirst()!=false){

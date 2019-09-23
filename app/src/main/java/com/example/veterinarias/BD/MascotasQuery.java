@@ -19,8 +19,8 @@ public class MascotasQuery {
         return qry;
     }
 
-    public static final String SELECT_ALL(){
-        return "SELECT * FROM "+TABLA;
+    public static final String SELECT_ALL(int id){
+        return "SELECT * FROM "+TABLA +" WHERE "+cIDUSUARIO+"="+id;
     }
 
 

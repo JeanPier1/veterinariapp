@@ -7,6 +7,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import com.example.veterinarias.Entities.Mascotas;
 
+import java.util.ArrayList;
+
 public class BD_MASCOTAS extends BD_CENTER {
 
     public BD_MASCOTAS(Context context) {
@@ -26,6 +28,30 @@ public class BD_MASCOTAS extends BD_CENTER {
         SQLiteDatabase db=this.getWritableDatabase();
         Cursor res=db.rawQuery(MascotasQuery.findyYd(id),null);
         return res;
+    }
+
+    public ArrayList<Mascotas>Listado(int idmascotas){
+        ArrayList<Mascotas> arrayList = new ArrayList<>();
+        SQLiteDatabase bd = this.getWritableDatabase();
+        Cursor cursomascotas;
+        if(bd!=null){
+            cursomascotas = bd.rawQuery(MascotasQuery.SELECT_ALL(idmascotas),null);
+            if(cursomascotas.moveToFirst()){
+                do{
+                    int id= cursomascotas.getInt(0);
+                    String nombre  = cursomascotas.getString(1);
+                    String sexo = cursomascotas.getString(2);
+                    String raza = cursomascotas.getString(3);
+                    String tipo = cursomascotas.getString(4);
+                    int idusuario=cursomascotas.getInt(5);
+
+                    Mascotas nu=new Mascotas(id,nombre,sexo,raza,tipo,idusuario);
+
+                    arrayList.add(nu);
+                }while (cursomascotas.moveToNext());
+            }
+        }
+        return arrayList;
     }
 
 }
